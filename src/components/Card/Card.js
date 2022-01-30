@@ -6,7 +6,7 @@ export default function Card(props) {
       <Title>
         <h3>{props.titulo}</h3>
       </Title>
-      <Main>
+      <Main>      
         <img src={props.foto} alt={props.titulo}></img>
         <div>Editora: {props.editora}</div>
         <div>
@@ -21,12 +21,14 @@ export default function Card(props) {
         </div>
       </Main>
       <Controls>
-        <BtnEdit type="submit" value="Editar"></BtnEdit>
+        <BtnEdit type="submit" value="Editar"   onClick={() => {
+            props.setEdit(props.id);
+          }}></BtnEdit>
         <BtnDelete
           type="submit"
           value="Excluir"
           onClick={() => {
-            props.setValue(props.id);
+            props.setExcluir(props.id);
           }}
         ></BtnDelete>
       </Controls>

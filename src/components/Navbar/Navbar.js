@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container, Logo, Links, List, ListItem, Hamburger } from "./Styles";
+import Register from "../Register/Register";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [myTimeout, setMyTimeout] = useState("");
+  const [register, setRegister] = useState(false);
 
   const handleAbreMenu = () => {
     if (!open) {
@@ -28,12 +30,6 @@ export default function Navbar() {
     setOpen(false);
   };
 
-  function handleLogout() {}
-
-  const handleClick = () => {
-    setOpen(false);
-  };
-
   return (
     <Container>
       <Logo href="/">
@@ -46,16 +42,24 @@ export default function Navbar() {
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
         >
-          <ListItem>Novo Cadastro</ListItem>
+          <ListItem
+            onClick={() => {
+              setRegister(true);
+              setOpen(false);
+            }}
+          >
+            Novo Cadastro
+          </ListItem>
         </List>
         <Hamburger onClick={handleAbreMenu}>
-          <a href="#foo">
+          <div>
             <span></span>
             <span></span>
             <span></span>
-          </a>
+          </div>
         </Hamburger>
       </Links>
+      {register ? <Register setRegister={setRegister} /> : null}
     </Container>
   );
 }

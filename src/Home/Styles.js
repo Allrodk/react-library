@@ -18,11 +18,17 @@ export const Title = styled.div`
   color: #efd6ac;
 `;
 
-export const Main = styled.div``;
+export const Main = styled.div`
+  height: 100vh;
+`;
 
 export const Section = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  h2 {
+    margin-top: calc(100vh - 70vh);
+    color: #efd6ac;
+  }
 `;

@@ -44,7 +44,7 @@ export default function Delete(props) {
               <BtnCancel
                 type="submit"
                 value="Fechar"
-                onClick={() => window.location.reload()}
+                onClick={() => props.setValue("")}
               ></BtnCancel>
             </Controls>
           </>

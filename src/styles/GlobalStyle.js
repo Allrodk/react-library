@@ -7,4 +7,12 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: sans-serif;
 }
+label{
+    font-size: 1em;
+}
+input{
+    font-size: 1em;
+    height: 2.5rem;
+    width: 17rem;  
+}
 `;

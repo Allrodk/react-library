@@ -58,7 +58,7 @@ export default function Edit(props) {
       <Container message={message}>
         {!message ? (
           <>
-            <Title>Novo Cadastro</Title>
+            <Title>Alterar Cadastro</Title>
             <Form onSubmit={handleSubmit}>
               <FormItem>
                 <label htmlFor="titulo">Título</label>
